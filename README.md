@@ -40,11 +40,13 @@ Criei este sistema pensando nas dificuldades que professores enfrentam ao criar 
 
 Escolhi uma stack moderna e robusta para garantir performance e escalabilidade:
 
-- **Frontend**: React 18 + Tailwind CSS
-- **Backend**: Node.js + Express
+- **Frontend**: React 18 + Tailwind CSS + React Router
+- **Backend**: Node.js + Express + Mongoose
 - **Banco de Dados**: MongoDB
-- **IA**: Claude AI (Anthropic)
+- **IA**: Claude AI (Anthropic SDK)
+- **Upload**: Multer + PDF-Parse
 - **Gerenciamento**: pnpm
+- **Desenvolvimento**: Nodemon + Concurrently
 
 ## 📋 Requisitos do Sistema
 
@@ -60,7 +62,7 @@ Para rodar o projeto, você precisará ter instalado:
 ### 1. Clone o Repositório
 
 ```bash
-git clone https://github.com/gustavo-sts-dev/sistema-provas-ai.git
+git clone https://github.com/GustavodaSilvaSantos/sistema-provas-ai.git
 cd sistema-provas-ai
 ```
 
@@ -107,6 +109,13 @@ PORT=5000
 ```bash
 # Executa frontend e backend simultaneamente
 pnpm run dev
+
+# Ou execute separadamente:
+pnpm run server  # Apenas backend
+pnpm run client  # Apenas frontend
+
+# Para produção:
+pnpm run prod
 ```
 
 O sistema estará disponível em:
@@ -177,7 +186,7 @@ O MongoDB organiza os dados em três coleções principais:
 
 Implementei integração completa com a Claude AI:
 
-- **Geração Inteligente**: Claude-Sonnet-4.5 cria questões contextualizadas
+- **Geração Inteligente**: Claude-3-Sonnet cria questões contextualizadas
 - **Processamento de PDF**: Extração automática de texto para contexto
 - **Correção Assistida**: IA auxilia na avaliação de questões dissertativas
 - **Feedback Personalizado**: Comentários adaptativos baseados no desempenho
@@ -187,9 +196,11 @@ Implementei integração completa com a Claude AI:
 ### Upload e Processamento de PDF
 
 - Suporte a arquivos até 10MB
-- Extração automática de texto
-- Limite inteligente de 100.000 caracteres
-- Múltiplos PDFs como contexto (até 5)
+- Extração automática de texto usando pdf-parse
+- Limite inteligente de 100.000 caracteres total
+- Múltiplos PDFs como contexto (até 5 resumos)
+- Validação de tipo de arquivo (apenas PDF)
+- Contador em tempo real de caracteres
 
 ### Sistema de Correção
 
@@ -197,6 +208,16 @@ Implementei integração completa com a Claude AI:
 - Classificação por letras (A, B, C, D, F)
 - Feedback contextualizado
 - Histórico completo de avaliações
+
+### API Endpoints
+
+O backend oferece uma API RESTful completa:
+
+- **`/api/exams`** - Gerenciamento de provas
+- **`/api/students`** - Respostas dos alunos
+- **`/api/corrections`** - Sistema de correção
+- **`/api/pdf`** - Upload e extração de PDF
+- **`/api/auth`** - Autenticação (se implementada)
 
 ## 🚨 Solução de Problemas
 
@@ -224,7 +245,7 @@ pnpm install
 **Porta em uso:**
 
 - Altere a porta no arquivo `server/index.js`
-- Ou mate o processo: `lsof -ti:5000 | xargs kill -9`
+- Ou mate o processo no Windows: `netstat -ano | findstr :5000` e `taskkill /PID <PID> /F`
 
 ## 💡 Sobre o Desenvolvimento
 
@@ -237,6 +258,9 @@ Desenvolvi este sistema como uma solução completa para automatizar processos e
 - Interface responsiva e intuitiva
 - Processamento eficiente de documentos PDF
 - Arquitetura escalável e modular
+- Validação robusta de dados e limites
+- Sistema de fallback quando IA não está disponível
+- Gerenciamento de estado complexo no frontend
 
 ## 📞 Contato
 

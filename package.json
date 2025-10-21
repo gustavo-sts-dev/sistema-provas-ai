@@ -15,7 +15,11 @@
   "devDependencies": {
     "concurrently": "^8.2.2"
   },
-  "keywords": ["provas", "educação", "avaliação"],
+  "keywords": [
+    "provas",
+    "educação",
+    "avaliação"
+  ],
   "author": "",
-  "license": "MIT"
+  "license": "SEE LICENSE IN LICENSE"
 }
