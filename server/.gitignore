@@ -4,15 +4,25 @@
 .env.development.local
 .env.test.local
 .env.production.local
+.env.staging
+.env.backup
 
 # Dependencies
 node_modules/
 
+# Package manager files
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
 # Logs
+logs/
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+lerna-debug.log*
 
 # Runtime data
 pids
@@ -23,7 +33,33 @@ pids
 # Coverage directory
 coverage/
 *.lcov
+.nyc_output
 
 # Build outputs
 build/
 dist/
+
+# Uploads directory (if exists)
+uploads/
+temp/
+tmp/
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Cache
+.cache/
+.eslintcache
+
+# PM2 files
+ecosystem.config.js
+.pm2/
+
+# Session files
+sessions/
+
+# Backup files
+*.bak
+*.backup
