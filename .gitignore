@@ -94,6 +94,10 @@ out/
 *.swo
 *~
 
+# Allow .gitignore files in subdirectories
+!*/.gitignore
+!**/.gitignore
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
