@@ -9,24 +9,28 @@ Este é um sistema completo que desenvolvi para automatizar a criação, aplica�
 Criei este sistema pensando nas dificuldades que professores enfrentam ao criar e corrigir provas. Ele oferece:
 
 ### ✅ Geração Inteligente de Provas
+
 - **Criação Manual**: Interface intuitiva para criar questões personalizadas
 - **Geração com IA**: A Claude AI cria questões baseadas em temas e materiais de apoio
 - Suporte completo a questões objetivas e dissertativas
 - Sistema flexível de pontuação
 
 ### ✅ Aplicação de Provas
+
 - Interface limpa e responsiva para os alunos
 - Validação de dados e salvamento automático
 - Suporte a diferentes tipos de questão
 - Experiência otimizada para dispositivos móveis
 
 ### ✅ Correção Automatizada
+
 - **IA para Dissertativas**: Claude AI analisa e corrige questões abertas
 - **Automática para Objetivas**: Correção instantânea de múltipla escolha
 - **Correção Manual**: Opção para revisão humana completa
 - Sistema de feedback detalhado e personalizado
 
 ### ✅ Gestão de Resultados
+
 - Dashboard completo com todas as correções
 - Sistema de notas com classificação por letras (A-F)
 - Relatórios detalhados de desempenho
@@ -54,12 +58,14 @@ Para rodar o projeto, você precisará ter instalado:
 ## 🚀 Como Executar o Projeto
 
 ### 1. Clone o Repositório
+
 ```bash
 git clone https://github.com/gustavo-sts-dev/sistema-provas-ai.git
 cd sistema-provas-ai
 ```
 
 ### 2. Instale as Dependências
+
 ```bash
 # Dependências do projeto principal
 pnpm install
@@ -67,7 +73,7 @@ pnpm install
 # Dependências do backend
 cd server && pnpm install
 
-# Dependências do frontend  
+# Dependências do frontend
 cd ../client && pnpm install
 
 # Volte para a raiz
@@ -75,6 +81,7 @@ cd ..
 ```
 
 ### 3. Configure o Ambiente
+
 Copie o arquivo de exemplo e configure suas variáveis:
 
 ```bash
@@ -96,12 +103,14 @@ PORT=5000
 ```
 
 ### 4. Execute o Sistema
+
 ```bash
 # Executa frontend e backend simultaneamente
 pnpm run dev
 ```
 
 O sistema estará disponível em:
+
 - **Frontend**: http://localhost:3000
 - **Backend**: http://localhost:5000
 
@@ -110,6 +119,7 @@ O sistema estará disponível em:
 ### 🎯 Criando Provas
 
 **Método 1 - Criação Manual:**
+
 1. Acesse "Criar Prova" no menu principal
 2. Escolha "Criação Manual"
 3. Defina título e descrição da prova
@@ -118,6 +128,7 @@ O sistema estará disponível em:
 6. Finalize a criação
 
 **Método 2 - Geração com IA:**
+
 1. Selecione "Geração com IA"
 2. Informe o tema da prova
 3. Adicione materiais de apoio (texto ou PDF)
@@ -134,11 +145,13 @@ O sistema estará disponível em:
 ### ✅ Corrigindo Provas
 
 **Correção Automática:**
+
 - IA analisa questões dissertativas
 - Questões objetivas são corrigidas automaticamente
 - Sistema gera feedback personalizado
 
 **Correção Manual:**
+
 - Revisor humano avalia todas as questões
 - Controle total sobre notas e comentários
 - Ideal para avaliações mais criteriosas
@@ -153,6 +166,7 @@ O sistema estará disponível em:
 ## 🏗️ Arquitetura do Sistema
 
 ### Estrutura do Banco de Dados
+
 O MongoDB organiza os dados em três coleções principais:
 
 - **exams**: Armazena as provas criadas (estrutura e questões)
@@ -160,9 +174,10 @@ O MongoDB organiza os dados em três coleções principais:
 - **corrections**: Mantém as correções e notas finais
 
 ### Integração com IA
+
 Implementei integração completa com a Claude AI:
 
-- **Geração Inteligente**: Claude-3-Sonnet cria questões contextualizadas
+- **Geração Inteligente**: Claude-Sonnet-4.5 cria questões contextualizadas
 - **Processamento de PDF**: Extração automática de texto para contexto
 - **Correção Assistida**: IA auxilia na avaliação de questões dissertativas
 - **Feedback Personalizado**: Comentários adaptativos baseados no desempenho
@@ -170,12 +185,14 @@ Implementei integração completa com a Claude AI:
 ## 🔧 Funcionalidades Técnicas
 
 ### Upload e Processamento de PDF
+
 - Suporte a arquivos até 10MB
 - Extração automática de texto
 - Limite inteligente de 100.000 caracteres
 - Múltiplos PDFs como contexto (até 5)
 
 ### Sistema de Correção
+
 - Algoritmo híbrido (automático + IA + manual)
 - Classificação por letras (A, B, C, D, F)
 - Feedback contextualizado
@@ -186,6 +203,7 @@ Implementei integração completa com a Claude AI:
 ### Problemas Comuns
 
 **MongoDB não conecta:**
+
 ```bash
 # Verifique se está rodando
 mongod --version
@@ -195,6 +213,7 @@ mongod
 ```
 
 **Erro de dependências:**
+
 ```bash
 # Limpe o cache e reinstale
 pnpm store prune
@@ -203,6 +222,7 @@ pnpm install
 ```
 
 **Porta em uso:**
+
 - Altere a porta no arquivo `server/index.js`
 - Ou mate o processo: `lsof -ti:5000 | xargs kill -9`
 
@@ -211,6 +231,7 @@ pnpm install
 Desenvolvi este sistema como uma solução completa para automatizar processos educacionais. O foco foi criar uma ferramenta que realmente facilite o trabalho de educadores, combinando a eficiência da automação com a flexibilidade necessária para diferentes contextos educacionais.
 
 ### Principais Desafios Resolvidos:
+
 - Integração complexa com IA para geração contextualizada
 - Sistema híbrido de correção (automática + manual)
 - Interface responsiva e intuitiva
@@ -226,8 +247,7 @@ Para dúvidas sobre implementação ou customizações, entre em contato.
 
 ---
 
-*Sistema desenvolvido com foco em inovação educacional e automação inteligente.*
-
+_Sistema desenvolvido com foco em inovação educacional e automação inteligente._
 
 ## 📄 Licença
 
