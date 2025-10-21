@@ -267,7 +267,12 @@ Desenvolvi este sistema como uma solução completa para automatizar processos e
 **Gustavo da Silva Santos**  
 **GS SOLUÇÕES PRO**
 
-Para dúvidas sobre implementação ou customizações, entre em contato.
+Para dúvidas sobre implementação, customizações ou parcerias:
+
+- 📱 **WhatsApp**: [+55 79 9 9635-2942](https://wa.me/5579996352942)
+- 📧 **Email**: tech_gustavo@proton.me
+- 💼 **LinkedIn**: [linkedin.com/in/gustavo-da-silva-santos-b93117366](https://www.linkedin.com/in/gustavo-da-silva-santos-b93117366)
+- 📸 **Instagram**: [@gs.solucoes.pro](https://instagram.com/gs.solucoes.pro)
 
 ---
 

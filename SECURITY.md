@@ -28,7 +28,8 @@
 ## Relatório de Vulnerabilidades
 
 Se encontrar alguma vulnerabilidade de segurança, entre em contato:
-- **Email**: [seu-email@exemplo.com]
+- **Email**: tech_gustavo@proton.me
+- **WhatsApp**: +55 79 9 9963-5294
 - **Assunto**: [SEGURANÇA] Sistema de Provas
 
 ## Boas Práticas
