@@ -55,7 +55,7 @@ Para rodar o projeto, você precisará ter instalado:
 
 ### 1. Clone o Repositório
 ```bash
-git clone https://github.com/seu-usuario/sistema-provas-ai.git
+git clone https://github.com/gustavo-sts-dev/sistema-provas-ai.git
 cd sistema-provas-ai
 ```
 
@@ -227,3 +227,11 @@ Para dúvidas sobre implementação ou customizações, entre em contato.
 ---
 
 *Sistema desenvolvido com foco em inovação educacional e automação inteligente.*
+
+
+## 📄 Licença
+
+Este projeto está sob **Licença de Uso Pessoal**.  
+Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+Para uso comercial, entre em contato: tech_gustavo@proton.me
